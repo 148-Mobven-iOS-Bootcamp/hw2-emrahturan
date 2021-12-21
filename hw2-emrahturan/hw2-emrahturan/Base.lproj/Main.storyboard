@@ -1,24 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hw2_emrahturan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJs-pp-k34">
+                                <rect key="frame" x="50" y="781" width="314" height="31"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Oyuna başla"/>
+                                <connections>
+                                    <action selector="secondPageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HKd-D5-1uV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuttuğunu sayı: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bof-KM-ayx">
+                                <rect key="frame" x="0.0" y="94" width="414" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SJs-pp-k34" secondAttribute="trailing" constant="50" id="3Z8-qZ-Cla"/>
+                            <constraint firstItem="SJs-pp-k34" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Fz7-0t-joB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SJs-pp-k34" secondAttribute="bottom" constant="50" id="HYz-eh-e0c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bof-KM-ayx" secondAttribute="trailing" id="UyS-Dh-oHf"/>
+                            <constraint firstItem="bof-KM-ayx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="syu-xO-hC0"/>
+                            <constraint firstItem="bof-KM-ayx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w5M-MA-fy1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textLabel" destination="bof-KM-ayx" id="ZNl-fi-CwP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="121"/>
+        </scene>
+        <!--SecondViewController-->
+        <scene sceneID="8So-nT-Bwz">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" title="SecondViewController" id="T26-eE-6nZ" customClass="SecondViewController" customModule="hw2_emrahturan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sq5-OY-LXW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scr-Kn-ywx">
+                                <rect key="frame" x="50" y="781" width="314" height="31"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sonucu gör"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aklından bir sayı tut" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7w-CK-Ov4">
+                                <rect key="frame" x="0.0" y="64" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bh6-ga-TuA">
+                                <rect key="frame" x="50" y="95" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2M-Qr-7ZY">
+                                <rect key="frame" x="100" y="139" width="214" height="31"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Tuttum"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="T26-eE-6nZ" eventType="touchUpInside" id="b1p-k5-99W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jdW-Ii-wY7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jdW-Ii-wY7" firstAttribute="trailing" secondItem="n2M-Qr-7ZY" secondAttribute="trailing" constant="100" id="3w3-ig-V5e"/>
+                            <constraint firstItem="jdW-Ii-wY7" firstAttribute="bottom" secondItem="Scr-Kn-ywx" secondAttribute="bottom" constant="50" id="7y9-hQ-g1Y"/>
+                            <constraint firstItem="bh6-ga-TuA" firstAttribute="top" secondItem="H7w-CK-Ov4" secondAttribute="bottom" constant="10" id="OHu-01-HYg"/>
+                            <constraint firstItem="H7w-CK-Ov4" firstAttribute="top" secondItem="jdW-Ii-wY7" secondAttribute="top" constant="20" id="PAB-MP-6T7"/>
+                            <constraint firstItem="bh6-ga-TuA" firstAttribute="leading" secondItem="jdW-Ii-wY7" secondAttribute="leading" constant="50" id="Tb5-0E-1wx"/>
+                            <constraint firstItem="H7w-CK-Ov4" firstAttribute="leading" secondItem="jdW-Ii-wY7" secondAttribute="leading" id="UaD-d4-w4Z"/>
+                            <constraint firstItem="Scr-Kn-ywx" firstAttribute="leading" secondItem="jdW-Ii-wY7" secondAttribute="leading" constant="50" id="ZUN-7h-hdl"/>
+                            <constraint firstItem="n2M-Qr-7ZY" firstAttribute="leading" secondItem="jdW-Ii-wY7" secondAttribute="leading" constant="100" id="hE1-6R-2mh"/>
+                            <constraint firstItem="n2M-Qr-7ZY" firstAttribute="top" secondItem="bh6-ga-TuA" secondAttribute="bottom" constant="10" id="iLz-uf-lg4"/>
+                            <constraint firstItem="jdW-Ii-wY7" firstAttribute="trailing" secondItem="Scr-Kn-ywx" secondAttribute="trailing" constant="50" id="jEH-RN-pro"/>
+                            <constraint firstItem="jdW-Ii-wY7" firstAttribute="trailing" secondItem="bh6-ga-TuA" secondAttribute="trailing" constant="50" id="jlw-az-icw"/>
+                            <constraint firstItem="jdW-Ii-wY7" firstAttribute="trailing" secondItem="H7w-CK-Ov4" secondAttribute="trailing" id="qaJ-yk-KLd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="bh6-ga-TuA" id="EPY-ZZ-Ox1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lod-wd-Cgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012" y="122"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
